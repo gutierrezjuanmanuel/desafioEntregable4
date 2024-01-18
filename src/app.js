@@ -1,8 +1,8 @@
 /** CLASE 10 **/
 
-const express = require("express"); 
-const app = express(); 
-const PUERTO = 8080; 
+const express = require("express");
+const app = express();
+const PUERTO = 8080;
 // const viewsRouter = require("./routes/views.router");
 // const exphbs = require("express-handlebars");
 
@@ -25,7 +25,7 @@ app.use(express.static("./src/public"));
 //Instalacion: npm install multer
 
 //Importamos multer: 
-//const multer = require("multer");
+const multer = require("multer");
 
 //Para guardar correctamente los archivos podemos configurar el "storage". 
 
@@ -44,10 +44,10 @@ app.use(express.static("./src/public"));
 
 //Configurar la ruta: 
 
-// app.post("/upload", upload.single("imagen"), (req, res) => {
+app.post("/upload", upload.single("imagen"), (req, res) => {
 
-//     res.send("Lo subimos con exito!!");
-// } )
+    res.send("Lo subimos con exito!!");
+})
 
 
 
@@ -62,7 +62,7 @@ app.listen(PUERTO);
 // const socket = require("socket.io");
 
 // //3) Me guardo una referencia de mi servidor (httpServer)
-// //4) Configuramos socket.io: 
+// //4) Configuramos socket.io:
 
 // const io = socket(httpServer);
 
@@ -76,7 +76,7 @@ app.listen(PUERTO);
 //         io.sockets.emit("mensaje", data);
 //     })
 
-//     //Ahora el servidor le va a enviar un mensaje al cliente. 
+//     //Ahora el servidor le va a enviar un mensaje al cliente.
 
 //     socket.emit("saludito", "Hola cliente, ¿cómo estas?");
 // })
