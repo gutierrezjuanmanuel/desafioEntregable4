@@ -41,7 +41,7 @@ const multer = require("multer");
 
 //La constante upload va a tener la configuración de multer. 
 //const upload = multer({storage});
-const upload = multer({desti: "./src/public/img"});
+const upload = multer({dest: "./src/public/img"});
 
 //Configurar la ruta: 
 
