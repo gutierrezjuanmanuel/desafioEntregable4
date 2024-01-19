@@ -29,19 +29,18 @@ const multer = require("multer");
 
 //Para guardar correctamente los archivos podemos configurar el "storage". 
 
-// const storage = multer.diskStorage({
-//     destination: (req, file, cb) => {
-//         cb(null, "./src/public/img");
-//     },
-//     filename: (req, file, cb) => {
-//         cb(null, file.originalname);
-//     }
-// })
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, "./src/public/img");
+    }, filename: (req, file, cb) => {
+        cb(null, file.originalname);
+    }
+})
 
 
 //La constante upload va a tener la configuración de multer. 
 //const upload = multer({storage});
-const upload = multer({dest: "./src/public/img"});
+const upload = multer({ storage });
 
 //Configurar la ruta: 
 
