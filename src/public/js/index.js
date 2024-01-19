@@ -1,11 +1,11 @@
-// console.log("Siii funcionooooo!!");
+console.log("Siii funcionooooo!!");
 
-// const socket = io(); 
+const socket = io(); 
 
-// socket.emit("mensaje", "Hola mundo!");
+socket.emit("mensaje", "Hola mundo!");
 
-// //Recibimos el saludito del servidor: 
+//Recibimos el saludito del servidor: 
 
-// socket.on("saludito", (data) => {
-//     console.log(data);
-// })
+socket.on("saludito", (data) => {
+    console.log(data);
+})
