@@ -39,7 +39,7 @@ const storage = multer.diskStorage({
 
 
 //La constante upload va a tener la configuración de multer. 
-const upload = multer({ storage });
+const upload = multer({storage});
 
 //Configurar la ruta: 
 
